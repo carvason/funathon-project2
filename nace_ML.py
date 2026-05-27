@@ -128,6 +128,8 @@ with mlflow.start_run() as run:
         training_config.save_path,   # local folder produced by ttc.train()
         artifact_path="model_artifacts",
     )
+
+    
 # %%
 # Loading the model back from MLflow
 #| label: load-from-run
@@ -141,6 +143,8 @@ local_dir = mlflow.artifacts.download_artifacts(
 ttc_loaded = torchTextClassifiers.load(local_dir)
 
 print(ttc_loaded)
+
+
 # %%
 # 7 Prediction and explainability
 # 7.1 Question 0 — Load the pretrained model from MLflow
