@@ -5,7 +5,7 @@ import mlflow
 from dotenv import load_dotenv
 
 load_dotenv(override=True)
-print('fff')
+print('Dados importados com sucesso.')
 # %%%
 
 # %%
@@ -83,4 +83,21 @@ print(
 )
 # %%
 # 5 Model architecture
+# bla bla
 # 6 Training
+# 6.1 Question 1 — Create the classifier
+from torchTextClassifiers import ModelConfig, TrainingConfig, torchTextClassifiers
+
+embedding_dim = 96
+
+model_config = ModelConfig(
+    embedding_dim=embedding_dim,
+    num_classes=n_classes,)
+
+ttc = torchTextClassifiers(
+    tokenizer=tokenizer,
+    model_config=model_config,
+    value_encoder=value_encoder,
+)
+
+# %%
