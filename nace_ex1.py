@@ -82,3 +82,5 @@ print(
     )
 )
 # %%
+# 5 Model architecture
+# 6 Training
